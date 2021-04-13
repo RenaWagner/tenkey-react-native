@@ -1,17 +1,27 @@
-import {Button, Form, FormItem, Label, Text, View} from 'native-base';
+import {
+  Button,
+  Container,
+  Form,
+  Item as FormItem,
+  Input,
+  Label,
+  Text,
+  View,
+} from 'native-base';
 import {TextInput} from 'react-native';
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import cities from '../data/cities.json';
 import {fetchWeatherLocation, weatherLoading} from '../store/weather/actions';
+import {useNavigation} from '@react-navigation/native';
 
 export default function LocationInput() {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
   const [chosenCities, setChosenCities] = useState([]);
+  const navigation = useNavigation();
 
-  const formSubmit = event => {
-    event.preventDefault();
+  const formSubmit = () => {
     const cityNames = cities.filter(item => {
       return item.city_name.toLowerCase().indexOf(city.toLowerCase()) >= 0;
     });
@@ -30,55 +40,54 @@ export default function LocationInput() {
     setCity('');
   };
 
+  console.log(chosenCities);
+
   return (
-    <View>
+    <Container style={{width: '100%', marginTop: 20}}>
       <Form>
         <FormItem floatingLabel>
           <Label>Search by city name:</Label>
-          <TextInput
-            type="text"
+          <Input
             value={city}
             onChangeText={setCity}
             placeholder="Find the weather"
           />
         </FormItem>
-        <Button bordered success>
+        <Button bordered success onPress={formSubmit}>
           <Text>Search</Text>
         </Button>
       </Form>
-      {/* {chosenCities.length ? (
-        <div style={{width: '100%'}}>
+      {chosenCities.length ? (
+        <View style={{width: '100%'}}>
           {chosenCities.map(city => (
-            <Link to="weatherToday" smooth={true} key={city.city_id}>
-              <button
-                className="btn btn-light ml-1 mr-1 mb-1 mt-2"
-                style={{height: 37.986}}
-                onClick={() => {
-                  const location = {
-                    lattitude: city.lat.toString(),
-                    longtitude: city.lon.toString(),
-                  };
-                  setChosenCities([]);
-                  setCity('');
-                  dispatch(weatherLoading());
-                  dispatch(fetchWeatherLocation(location));
-                }}>
-                {city.country_code === 'US' ? (
-                  <p>
-                    {city.city_name}, {city.state_code}, {city.country_code}
-                  </p>
-                ) : (
-                  <p>
-                    {city.city_name}, {city.country_code}
-                  </p>
-                )}
-              </button>
-            </Link>
+            <Button
+              key={city.city_id}
+              onPress={() => {
+                const location = {
+                  lattitude: city.lat.toString(),
+                  longtitude: city.lon.toString(),
+                };
+                setChosenCities([]);
+                setCity('');
+                dispatch(weatherLoading());
+                dispatch(fetchWeatherLocation(location));
+                navigation.navigate('TodayWeather');
+              }}>
+              {city.country_code === 'US' ? (
+                <Text>
+                  {city.city_name}, {city.state_code}, {city.country_code}
+                </Text>
+              ) : (
+                <Text>
+                  {city.city_name}, {city.country_code}
+                </Text>
+              )}
+            </Button>
           ))}
-        </div>
+        </View>
       ) : (
-        <p></p>
-      )} */}
-    </View>
+        <></>
+      )}
+    </Container>
   );
 }
