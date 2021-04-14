@@ -6,9 +6,11 @@ import {createStackNavigator} from '@react-navigation/stack';
 import ForecastScreen from './src/pages/ForecastScreen';
 import {Provider} from 'react-redux';
 import store from './src/store';
-import HomeScreen from './src/pages/HomeScreen';
 import {Root} from 'native-base';
 import TodayWeather from './src/pages/TodayWeather';
+import StyleScreen from './src/pages/StyleScreen';
+import WeatherScreen from './src/pages/WeatherScreen';
+import TodayStyle from './src/pages/TodayStyle';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +20,7 @@ function App() {
       <Root>
         <NavigationContainer>
           <Stack.Navigator
-            initialRouteName="Home"
+            initialRouteName="Style"
             screenOptions={{
               headerStyle: {
                 backgroundColor: '#45b5fe',
@@ -26,9 +28,11 @@ function App() {
               headerTintColor: '#fff',
               headerTitleAlign: 'center',
             }}>
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Style" component={StyleScreen} />
+            <Stack.Screen name="Weather" component={WeatherScreen} />
             <Stack.Screen name="Forecast" component={ForecastScreen} />
-            <Stack.Screen name="Today's Weather" component={TodayWeather} />
+            <Stack.Screen name="TodayWeather" component={TodayWeather} />
+            <Stack.Screen name="TodayStyle" component={TodayStyle} />
           </Stack.Navigator>
         </NavigationContainer>
       </Root>

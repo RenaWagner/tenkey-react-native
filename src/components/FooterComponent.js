@@ -10,35 +10,24 @@ export default function FooterComponent() {
         <Button
           vertival
           onPress={() => {
-            navigation.navigate('Home');
+            navigation.navigate('Style');
           }}>
-          <Icon name="calendar" />
-          <Text>Today</Text>
-        </Button>
-        <Button
-          vertival
-          //   onPress={() => {
-          //     navigation.navigate('Search By Keywords');
-          //   }}
-        >
-          <Icon name="partly-sunny-outline" />
-          <Text>Forecast</Text>
-        </Button>
-        <Button
-          vertival
-          //   onPress={() => {
-          //     navigation.navigate('Search By Keywords');
-          //   }}
-        >
           <Icon name="shirt-outline" />
           <Text>Style</Text>
         </Button>
         <Button
           vertival
-          //   onPress={() => {
-          //     navigation.navigate('Search By Keywords');
-          //   }}
-        >
+          onPress={() => {
+            navigation.navigate('Weather');
+          }}>
+          <Icon name="partly-sunny-outline" />
+          <Text>Weather</Text>
+        </Button>
+        <Button
+          vertival
+          onPress={() => {
+            navigation.navigate('Personal');
+          }}>
           <Icon name="person-circle" />
           <Text>Personal</Text>
         </Button>

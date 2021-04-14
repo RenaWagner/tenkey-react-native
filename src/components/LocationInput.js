@@ -15,7 +15,8 @@ import cities from '../data/cities.json';
 import {fetchWeatherLocation, weatherLoading} from '../store/weather/actions';
 import {useNavigation} from '@react-navigation/native';
 
-export default function LocationInput() {
+export default function LocationInput(props) {
+  const type = props.type;
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
   const [chosenCities, setChosenCities] = useState([]);
@@ -28,12 +29,6 @@ export default function LocationInput() {
 
     if (!cityNames.length) {
       alert('Cannot find the match with the typed city name');
-    } else if (cityNames.length === 1) {
-      const location = {
-        lattitude: cityNames[0].lat.toString(),
-        longtitude: cityNames[0].lon.toString(),
-      };
-      dispatch(fetchWeatherLocation(location));
     } else {
       setChosenCities(cityNames);
     }
@@ -71,7 +66,9 @@ export default function LocationInput() {
                 setCity('');
                 dispatch(weatherLoading());
                 dispatch(fetchWeatherLocation(location));
-                navigation.navigate('TodayWeather');
+                type === 'weather'
+                  ? navigation.navigate('TodayWeather')
+                  : navigation.navigate('TodayStyle');
               }}>
               {city.country_code === 'US' ? (
                 <Text>

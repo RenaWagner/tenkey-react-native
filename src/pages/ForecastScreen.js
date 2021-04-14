@@ -15,7 +15,6 @@ export default function ForecastScreen({navigation}) {
           }}>
           Forecast screen!
         </Text>
-        <FooterComponent />
       </View>
     </Container>
   );
