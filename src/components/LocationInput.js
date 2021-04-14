@@ -7,8 +7,8 @@ import {
   Label,
   Text,
   View,
+  Content,
 } from 'native-base';
-import {TextInput} from 'react-native';
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import cities from '../data/cities.json';
@@ -38,20 +38,27 @@ export default function LocationInput(props) {
   console.log(chosenCities);
 
   return (
-    <Container style={{width: '100%', marginTop: 20}}>
-      <Form>
-        <FormItem floatingLabel>
-          <Label>Search by city name:</Label>
-          <Input
-            value={city}
-            onChangeText={setCity}
-            placeholder="Find the weather"
-          />
-        </FormItem>
-        <Button bordered success onPress={formSubmit}>
+    <View
+      style={{
+        alignItems: 'center',
+      }}>
+      <View style={{width: 300}}>
+        <Form>
+          <FormItem floatingLabel>
+            <Label style={{color: 'white'}}>Search by city name:</Label>
+            <Input
+              value={city}
+              onChangeText={setCity}
+              placeholder="Find the weather"
+            />
+          </FormItem>
+        </Form>
+      </View>
+      <View style={{marginTop: 10}}>
+        <Button warning onPress={formSubmit}>
           <Text>Search</Text>
         </Button>
-      </Form>
+      </View>
       {chosenCities.length ? (
         <View style={{width: '100%'}}>
           {chosenCities.map(city => (
@@ -85,6 +92,6 @@ export default function LocationInput(props) {
       ) : (
         <></>
       )}
-    </Container>
+    </View>
   );
 }
