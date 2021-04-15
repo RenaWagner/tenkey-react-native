@@ -35,8 +35,6 @@ export default function LocationInput(props) {
     setCity('');
   };
 
-  console.log(chosenCities);
-
   return (
     <View
       style={{
