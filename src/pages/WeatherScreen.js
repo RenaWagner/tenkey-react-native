@@ -33,7 +33,7 @@ const image = {
     'https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80',
 };
 
-export default function WeatherScreen({navigation}) {
+export default function WeatherScreen() {
   return (
     <Root>
       <Container>
@@ -67,10 +67,10 @@ export default function WeatherScreen({navigation}) {
                     textAlign: 'center',
                     color: 'white',
                   }}>
-                  Find today's weather at your location
+                  Find out today's weather at your location
                 </Text>
-                <LocationButton />
-                <LocationInput />
+                <LocationButton type={'weather'} />
+                <LocationInput type={'weather'} />
               </View>
             </ImageBackground>
           </View>

@@ -14,6 +14,7 @@ export default function StyleCard() {
   const userStyles = useSelector(selectUserStyles);
   const publicStyleWithRating = useSelector(selectPublicStylesWithRating);
   const isLoading = useSelector(selectStyleLoading);
+
   return (
     <ScrollView>
       <View

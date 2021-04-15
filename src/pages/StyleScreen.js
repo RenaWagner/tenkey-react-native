@@ -72,8 +72,8 @@ export default function StyleScreen() {
                     temperature
                   </Text>
                 </View>
-                <LocationButton />
-                <LocationInput />
+                <LocationButton type={'style'} />
+                <LocationInput type={'style'} />
               </View>
             </ImageBackground>
           </View>

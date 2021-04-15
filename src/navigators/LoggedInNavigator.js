@@ -6,6 +6,7 @@ import WeatherScreen from '../pages/WeatherScreen';
 import TodayStyle from '../pages/TodayStyle';
 import ForecastScreen from '../pages/ForecastScreen';
 import PersonalScreen from '../pages/PersonalScreen';
+import UpdateStyle from '../pages/UpdateStyle';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export default function LoggedInNavigator() {
       <Stack.Screen name="TodayWeather" component={TodayWeather} />
       <Stack.Screen name="TodayStyle" component={TodayStyle} />
       <Stack.Screen name="Personal" component={PersonalScreen} />
+      <Stack.Screen name="UpdateStyle" component={UpdateStyle} />
     </Stack.Navigator>
   );
 }

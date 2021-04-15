@@ -6,7 +6,6 @@ export const fetchWeatherLocation = currentLocation => async (
   dispatch,
   getState,
 ) => {
-  // console.log(currentLocation);
   try {
     const res = await axios.get(
       `${API_URL}/current/?lat=${currentLocation.lattitude}&lon=${currentLocation.longtitude}&key=${API_KEY}`,

@@ -68,9 +68,6 @@ export const updateRatingUserStyle = (id, rating) => {
         },
       );
       dispatch(updatedUserSytle(response.data));
-      dispatch(
-        showMessage('success', false, 'Successfully updated the rating!', 2000),
-      );
     } catch (error) {
       if (error.response) {
         console.log(error.response.data.message);
@@ -103,14 +100,6 @@ export const updateCommentUserStyle = (id, comment) => {
         },
       );
       dispatch(updatedUserSytle(response.data));
-      dispatch(
-        showMessage(
-          'success',
-          false,
-          'Successfully updated the comment!',
-          2000,
-        ),
-      );
     } catch (error) {
       if (error.response) {
         console.log(error.response.data.message);
@@ -138,9 +127,6 @@ export const updateRatingPublicStyle = (publicstyleId, rating) => {
         },
       );
       dispatch(updatePublicStyle(response.data));
-      dispatch(
-        showMessage('success', false, 'Successfully updated the rating!', 2000),
-      );
     } catch (error) {
       if (error.response) {
         console.log(error.response.data.message);
@@ -180,14 +166,6 @@ export const uploadStyle = (data, imageUrl) => {
       );
       console.log(response.data);
       dispatch(uploadedStyle(response.data));
-      dispatch(
-        showMessage(
-          'success',
-          false,
-          'Successfully uploaded your style!',
-          2000,
-        ),
-      );
     } catch (error) {
       if (error.response) {
         console.log(error.response.data.message);

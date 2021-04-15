@@ -23,6 +23,9 @@ export default function LocationInput(props) {
   const navigation = useNavigation();
 
   const formSubmit = () => {
+    if (city === '') {
+      Alert.alert('Please type city.');
+    }
     const cityNames = cities.filter(item => {
       return item.city_name.toLowerCase().indexOf(city.toLowerCase()) >= 0;
     });
