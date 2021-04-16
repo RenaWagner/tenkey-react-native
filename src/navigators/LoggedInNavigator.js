@@ -7,6 +7,8 @@ import TodayStyle from '../pages/TodayStyle';
 import ForecastScreen from '../pages/ForecastScreen';
 import PersonalScreen from '../pages/PersonalScreen';
 import UpdateStyle from '../pages/UpdateStyle';
+import UploadOutfitScreen from '../pages/UploadOutfitScreen';
+import ProfileSettingScreen from '../pages/ProfileSettingScreen';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +30,8 @@ export default function LoggedInNavigator() {
       <Stack.Screen name="TodayStyle" component={TodayStyle} />
       <Stack.Screen name="Personal" component={PersonalScreen} />
       <Stack.Screen name="UpdateStyle" component={UpdateStyle} />
+      <Stack.Screen name="Upload" component={UploadOutfitScreen} />
+      <Stack.Screen name="Profile" component={ProfileSettingScreen} />
     </Stack.Navigator>
   );
 }
