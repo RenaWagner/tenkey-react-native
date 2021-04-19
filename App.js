@@ -9,8 +9,6 @@ import {selectUserToken} from './src/store/user/selectors';
 import LoggedInNavigator from './src/navigators/LoggedInNavigator';
 import AuthNavigator from './src/navigators/AuthNavigator';
 
-const Stack = createStackNavigator();
-
 function BeforeApp() {
   const dispatch = useDispatch();
 
