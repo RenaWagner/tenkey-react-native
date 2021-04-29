@@ -205,6 +205,8 @@ PODS:
   - React-jsinspector (0.64.0)
   - react-native-geolocation (2.0.2):
     - React
+  - react-native-image-picker (3.5.0):
+    - React-Core
   - react-native-safe-area-context (3.2.0):
     - React-Core
   - React-perflogger (0.64.0)
@@ -331,6 +333,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
+  - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -389,6 +392,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-geolocation:
     :path: "../node_modules/@react-native-community/geolocation"
+  react-native-image-picker:
+    :path: "../node_modules/react-native-image-picker"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-perflogger:
@@ -448,6 +453,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 06a9c77b56902ae7ffcdd7a4905f664adc5d237b
   React-jsinspector: 0ae35a37b20d5e031eb020a69cc5afdbd6406301
   react-native-geolocation: cbd9d6bd06bac411eed2671810f454d4908484a8
+  react-native-image-picker: 189e8d3653b00442cb790bce09a283edaf8e02b6
   react-native-safe-area-context: e471852c5ed67eea4b10c5d9d43c1cebae3b231d
   React-perflogger: 9c547d8f06b9bf00cb447f2b75e8d7f19b7e02af
   React-RCTActionSheet: 3080b6e12e0e1a5b313c8c0050699b5c794a1b11
