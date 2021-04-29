@@ -127,7 +127,7 @@ export const updateProfile = data => {
           headers: {Authorization: `Bearer ${jwt}`},
         },
       );
-      console.log(response.data);
+      console.log('response', response.data);
       dispatch(updatedProfile(response.data));
     } catch (error) {
       if (error.response) {

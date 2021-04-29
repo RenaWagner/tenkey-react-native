@@ -226,7 +226,6 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				64C21901A44489ED4168FA9A /* [CP] Embed Pods Frameworks */,
 				F01ED5F5C95BCF64CB266D90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -249,7 +248,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				82E8FA8EFB6C343FF5A4E659 /* [CP] Embed Pods Frameworks */,
 				A4FD3D58ED7D31658DA8BF85 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -370,40 +368,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		64C21901A44489ED4168FA9A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TenkeyApp-TenkeyAppTests/Pods-TenkeyApp-TenkeyAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TenkeyApp-TenkeyAppTests/Pods-TenkeyApp-TenkeyAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TenkeyApp-TenkeyAppTests/Pods-TenkeyApp-TenkeyAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82E8FA8EFB6C343FF5A4E659 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TenkeyApp/Pods-TenkeyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TenkeyApp/Pods-TenkeyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TenkeyApp/Pods-TenkeyApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A4FD3D58ED7D31658DA8BF85 /* [CP] Copy Pods Resources */ = {

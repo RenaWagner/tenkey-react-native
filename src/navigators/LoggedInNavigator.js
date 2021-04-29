@@ -9,6 +9,7 @@ import PersonalScreen from '../pages/PersonalScreen';
 import UpdateStyle from '../pages/UpdateStyle';
 import UploadOutfitScreen from '../pages/UploadOutfitScreen';
 import ProfileSettingScreen from '../pages/ProfileSettingScreen';
+import UpdateProfile from '../pages/UpdateProfile';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,7 @@ export default function LoggedInNavigator() {
       <Stack.Screen name="UpdateStyle" component={UpdateStyle} />
       <Stack.Screen name="Upload" component={UploadOutfitScreen} />
       <Stack.Screen name="Profile" component={ProfileSettingScreen} />
+      <Stack.Screen name="UpdateProfile" component={UpdateProfile} />
     </Stack.Navigator>
   );
 }

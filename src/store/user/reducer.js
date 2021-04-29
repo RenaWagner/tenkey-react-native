@@ -33,7 +33,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        userInfo: action.payload.userToUpdate,
+        userInfo: action.payload,
       };
     }
     case 'user/allStyles': {
